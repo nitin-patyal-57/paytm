@@ -1,0 +1,22 @@
+{
+  "name": "fuelpay-backend",
+  "version": "1.0.0",
+  "description": "FuelPay demo backend - transaction API, demo payment service, Paytm-ready provider abstraction",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate": "node db/migrate.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "pg": "^8.16.0"
+  }
+}

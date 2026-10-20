@@ -1,0 +1,42 @@
+name: fuelpay_pump
+description: "FuelPay pump attendant tablet app (demo)"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # Shared models, state machine, BLE protocol and design system.
+  fuelpay_core:
+    path: ../../packages/fuelpay_core
+
+  # BLE peripheral role: GATT server + advertising so the customer can connect.
+  # (Customer app uses the same package's central role — see docs/bluetooth-protocol.md.)
+  bluetooth_low_energy: ^6.2.1
+
+  # Demo payment QR rendering.
+  qr_flutter: ^4.1.0
+
+  # Android runtime Bluetooth permission requests.
+  permission_handler: ^11.3.1
+
+  # Local transaction persistence (history + restart recovery).
+  shared_preferences: ^2.3.0
+
+  # REST calls to the FuelPay backend.
+  http: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
